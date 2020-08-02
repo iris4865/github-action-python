@@ -20,6 +20,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: warn
         run: python3 warn.py
+        env:
+          TEST_KEY: "${{ secrets.TEST_KEY }}"
   build:
     needs: [prepare]
 
