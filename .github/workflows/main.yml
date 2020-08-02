@@ -10,7 +10,14 @@ on:
     branches: [ master ]
 
 jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: |
+          echo test is test
   build:
+    needs: [prepare]
 
     runs-on: ubuntu-latest
 
