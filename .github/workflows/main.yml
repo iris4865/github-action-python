@@ -17,6 +17,7 @@ jobs:
         run: |
           echo test is test
           echo ${{ secrets.TEST_KEY }}
+      - uses: actions/checkout@v2
       - name: warn
         run: python warn.py
   build:
