@@ -19,7 +19,7 @@ jobs:
           echo ${{ secrets.TEST_KEY }}
       - uses: actions/checkout@v2
       - name: warn
-        run: python warn.py
+        run: python3 warn.py
   build:
     needs: [prepare]
 
