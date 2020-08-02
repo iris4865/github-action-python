@@ -17,6 +17,8 @@ jobs:
         run: |
           echo test is test
           echo ${{ secrets.TEST_KEY }}
+      - name: warn
+        run: python warn.py
   build:
     needs: [prepare]
 
