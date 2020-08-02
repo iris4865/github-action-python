@@ -16,6 +16,7 @@ jobs:
       - name: echo
         run: |
           echo test is test
+          echo ${{ secrets.TEST_KEY }}
   build:
     needs: [prepare]
 
